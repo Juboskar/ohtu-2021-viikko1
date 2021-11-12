@@ -1,10 +1,6 @@
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
-        if tilavuus > 0.0:
-            self.tilavuus = tilavuus
-        else:
-            # virheellinen, nollataan
-            self.tilavuus = 0.0
+        self.tilavuus = tilavuus if tilavuus > 0.0 else 0.0
         if alku_saldo < 0.0:
             # virheellinen, nollataan
             self.saldo = 0.0
@@ -37,23 +33,6 @@ class Varasto:
             return kaikki_mita_voidaan
 
         self.saldo = self.saldo - maara
-        print("hello1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
-        print("hello")
         return maara
 
     def __str__(self):
